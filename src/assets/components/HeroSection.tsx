@@ -53,7 +53,7 @@ const HeroSection = () => {
             href="#booking"
             className="rose-gold-glow rounded-full bg-[#B8956A] px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all duration-300 hover:bg-[#D6BFA7] hover:scale-[1.03] active:scale-[0.97]"
           >
-            {t("Rezervo Tash", "Book Now")}
+            {t("Rezervoni Tani", "Book Now")}
           </a>
 
           <a

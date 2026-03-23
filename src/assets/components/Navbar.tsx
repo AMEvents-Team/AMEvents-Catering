@@ -24,7 +24,7 @@ const Navbar = () => {
     { href: "#services", label: t("Shërbimet", "Services") },
     { href: "#menu", label: t("Menu", "Menu") },
     { href: "#gallery", label: t("Galeria", "Gallery") },
-    { href: "#booking", label: t("Rezervo", "Booking") },
+    { href: "#booking", label: t("Rezervoni", "Booking") },
     { href: "#contact", label: t("Kontakti", "Contact") },
   ];
 
