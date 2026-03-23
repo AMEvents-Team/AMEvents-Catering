@@ -45,7 +45,10 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            >
+              className={`font-body px-3 py-1 text-s font-semibold tracking-widest transition-colors
+              ${scrolled ? "text-[#B8956A]" : "text-[#E5D3B3]"}
+              hover:text-[#D6BFA7]`}
+            >
               {l.label}
             </a>
           ))}
@@ -54,52 +57,64 @@ className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B895
         <div className="flex items-center gap-3">
           <button
             onClick={() => setLang(lang === "al" ? "en" : "al")}
-className="font-body rounded-full border border-[#CBB79C] px-3 py-1 text-xs font-semibold tracking-widest text-[#B8956A] transition-colors hover:bg-[#CBB79C] hover:text-white"          >
+            className={`font-body rounded-full border px-3 py-1 text-xs font-semibold tracking-widest transition-colors
+            border-[#CBB79C]
+            ${scrolled ? "text-[#B8956A]" : "text-[#E5D3B3]"}
+            hover:bg-[#CBB79C] hover:text-white`}
+          >
             {lang === "al" ? "EN" : "AL"}
           </button>
+
           <button
             onClick={() => setDark(!dark)}
-className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            
+            className={`font-body px-3 py-1 text-s font-semibold tracking-widest transition-colors
+            ${scrolled ? "text-[#B8956A]" : "text-[#E5D3B3]"}
+            hover:text-white`}
             aria-label="Toggle theme"
           >
             {dark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
+
           <a
             href="https://wa.me/38348801120"
             target="_blank"
             rel="noopener noreferrer"
-className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            
+            className={`font-body px-3 py-1 text-s font-semibold tracking-widest transition-colors
+            ${scrolled ? "text-[#B8956A]" : "text-[#E5D3B3]"}
+            hover:text-white`}
             aria-label="WhatsApp"
           >
             <MessageCircle size={16} />
           </a>
-        <button
-  className="lg:hidden rounded-full p-2 text-[#B8956A]"
-  onClick={() => setMenuOpen(!menuOpen)}
-  aria-label="Menu"
->
-  {menuOpen ? <X size={20} /> : <Menu size={20} />}
-</button>
-</div>
-</div>
 
-{/* Mobile menu */}
-{menuOpen && (
-  <div className="glass-nav border-t border-[#D6BFA7] px-6 py-6 lg:hidden bg-[#F8F3ED]">
-    <div className="flex flex-col gap-4">
-      {links.map((l) => (
-        <a
-          key={l.href}
-          href={l.href}
-          onClick={() => setMenuOpen(false)}
-          className="font-body text-base font-medium text-[#B8956A] transition-colors hover:text-[#8C6A4A]"
-        >
-          {l.label}
-        </a>
-      ))}
-    </div>
-  </div>
-)}
+          <button
+            className={`lg:hidden rounded-full p-2
+            ${scrolled ? "text-[#B8956A]" : "text-[#E5D3B3]"}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="glass-nav border-t border-[#D6BFA7] px-6 py-6 lg:hidden bg-[#F8F3ED]">
+          <div className="flex flex-col gap-4">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMenuOpen(false)}
+                className="font-body text-base font-medium text-[#B8956A] transition-colors hover:text-[#8C6A4A]"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
