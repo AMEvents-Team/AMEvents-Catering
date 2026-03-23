@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle, Moon, Sun } from "lucide-react";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 import { useLang } from "./context/LanguageContext";
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="AM Event & Catering" className="h-10 w-auto rounded-sm" />
+          <img src={logo} alt="AM Event & Catering" className="h-24 w-auto rounded-sm" />
         </a>
 
         {/* Desktop links */}
@@ -45,8 +45,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="font-body text-sm font-medium tracking-wide text-muted-foreground transition-colors duration-300 hover:text-primary"
-            >
+className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            >
               {l.label}
             </a>
           ))}
@@ -55,13 +54,12 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setLang(lang === "al" ? "en" : "al")}
-            className="font-body rounded-full border border-border px-3 py-1 text-xs font-semibold tracking-widest text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-          >
+className="font-body rounded-full border border-[#CBB79C] px-3 py-1 text-xs font-semibold tracking-widest text-[#B8956A] transition-colors hover:bg-[#CBB79C] hover:text-white"          >
             {lang === "al" ? "EN" : "AL"}
           </button>
           <button
             onClick={() => setDark(!dark)}
-            className="rounded-full p-2 text-foreground transition-colors hover:bg-secondary"
+className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            
             aria-label="Toggle theme"
           >
             {dark ? <Sun size={16} /> : <Moon size={16} />}
@@ -70,38 +68,38 @@ const Navbar = () => {
             href="https://wa.me/38348801120"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full p-2 text-foreground transition-colors hover:text-primary"
+className="font-body  px-3 py-1 text-s font-semibold tracking-widest text-[#B8956A] transition-colors  hover:text-[#D6BFA7]"            
             aria-label="WhatsApp"
           >
             <MessageCircle size={16} />
           </a>
-          <button
-            className="lg:hidden rounded-full p-2 text-foreground"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu"
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-      </div>
+        <button
+  className="lg:hidden rounded-full p-2 text-[#B8956A]"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Menu"
+>
+  {menuOpen ? <X size={20} /> : <Menu size={20} />}
+</button>
+</div>
+</div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="glass-nav border-t border-border px-6 py-6 lg:hidden">
-          <div className="flex flex-col gap-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setMenuOpen(false)}
-                className="font-body text-base font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+{/* Mobile menu */}
+{menuOpen && (
+  <div className="glass-nav border-t border-[#D6BFA7] px-6 py-6 lg:hidden bg-[#F8F3ED]">
+    <div className="flex flex-col gap-4">
+      {links.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          onClick={() => setMenuOpen(false)}
+          className="font-body text-base font-medium text-[#B8956A] transition-colors hover:text-[#8C6A4A]"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+  </div>
+)}
     </nav>
   );
 };

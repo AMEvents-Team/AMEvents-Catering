@@ -22,9 +22,11 @@ const HeroSection = () => {
         >
           AM Event & Catering
         </h1>
-        <div className="my-6 h-px w-24 bg-white/40" />
+
+        <div className="my-6 h-px w-24 bg-[#D6BFA7]" />
+
         <p
-          className="font-display max-w-2xl text-lg font-light italic leading-relaxed text-white/85 sm:text-xl md:text-2xl"
+          className="font-display max-w-2xl text-lg font-light italic leading-relaxed text-[#F8F3ED] sm:text-xl md:text-2xl"
           style={{ animationDelay: "0.5s" }}
         >
           {t(
@@ -32,8 +34,9 @@ const HeroSection = () => {
             "Where Taste Meets Elegance"
           )}
         </p>
+
         <p
-          className="font-body mt-4 max-w-lg text-sm font-light tracking-wide text-white/70 sm:text-base"
+          className="font-display mt-4 max-w-lg text-sm font-light tracking-wide text-[#E8D8C8] sm:text-base"
           style={{ animationDelay: "0.7s" }}
         >
           {t(
@@ -41,19 +44,21 @@ const HeroSection = () => {
             "Premium catering and event styling for unforgettable moments."
           )}
         </p>
+
         <div
           className="mt-10 flex flex-col gap-4 sm:flex-row"
           style={{ animationDelay: "0.9s" }}
         >
           <a
             href="#booking"
-            className="rose-gold-glow rounded-full bg-primary px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-primary-foreground transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+            className="rose-gold-glow rounded-full bg-[#B8956A] px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all duration-300 hover:bg-[#D6BFA7] hover:scale-[1.03] active:scale-[0.97]"
           >
             {t("Rezervo Tash", "Book Now")}
           </a>
+
           <a
             href="#services"
-            className="rounded-full border border-white/30 px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] active:scale-[0.97]"
+            className="rounded-full border border-[#D6BFA7] px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-[#F8F3ED] transition-all duration-300 hover:bg-[#D6BFA7]/20 hover:scale-[1.03] active:scale-[0.97]"
           >
             {t("Shiko Shërbimet", "Explore Services")}
           </a>
