@@ -20,7 +20,7 @@ const BookingSection = () => {
       lang === "al"
         ? `Përshëndetje AM Event & Catering! Jam i/e interesuar për një ofertë për eventin tim. Detajet: ${form.name},më datë ${form.date}, ${form.guests} të ftuar, ${form.type}, ${form.message}.`
         : `Hello AM Event & Catering! I am interested in receiving an offer for my event. Details: ${form.name}, date:${form.date}, ${form.guests}guests, ${form.type}, ${form.message}.`;
-    const url = `https://wa.me/38348679674?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/38343801120?text=${encodeURIComponent(msg)}`;
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) {
       setShowSuccess(true);
@@ -38,7 +38,7 @@ const BookingSection = () => {
     {/* TITLE */}
     <div className="mb-12 text-center">
       <h2 className="font-display text-3xl font-light tracking-wide text-[#B8956A] sm:text-4xl md:text-5xl text-balance">
-        {t("Rezervo Eventin Tand", "Book Your Event")}
+        {t("Rezervo Eventin Tënd", "Book Your Event")}
       </h2>
       <div className="mx-auto mt-4 h-px w-16 bg-gradient-to-r from-transparent via-[#D6BFA7] to-transparent" />
     </div>

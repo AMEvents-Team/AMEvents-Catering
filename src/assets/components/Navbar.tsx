@@ -76,7 +76,7 @@ const Navbar = () => {
           </button>
 
           <a
-            href="https://wa.me/38348801120"
+            href="https://wa.me/38343801120"
             target="_blank"
             rel="noopener noreferrer"
             className={`font-body px-3 py-1 text-s font-semibold tracking-widest transition-colors
