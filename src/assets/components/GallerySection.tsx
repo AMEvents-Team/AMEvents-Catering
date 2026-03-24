@@ -71,7 +71,7 @@ const GallerySection = () => {
       <div ref={ref} className="section-reveal mx-auto max-w-6xl px-6">
         {/* TITLE */}
         <div className="mb-16 text-center">
-          <h2 className="font-display text-3xl font-light tracking-wide text-[#b76e79] sm:text-4xl md:text-5xl text-balance">
+          <h2 className="font-display text-3xl font-light tracking-wide  text-[#B8956A] sm:text-4xl md:text-5xl text-balance">
             {t(
               "Dekorime të personalizueme për çdo event",
               "Personalized styling for every event"
@@ -120,7 +120,7 @@ const GallerySection = () => {
               absolute left-2 
               bg-white/30 
               backdrop-blur-md 
-              text-[#b76e79] 
+               text-[#B8956A] 
               px-3 py-2 
               rounded-full 
               hover:bg-white/50 

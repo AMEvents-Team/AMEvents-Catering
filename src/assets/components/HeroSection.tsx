@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
         <h1
-          className="font-display text-4xl font-light leading-[1.1] tracking-wide text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          className="font-display text-4xl font-light leading-[1.1] tracking-wide text-[#E8D8C8] sm:text-5xl md:text-6xl lg:text-7xl"
           style={{ animationDelay: "0.2s" }}
         >
           AM Event & Catering
@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="my-6 h-px w-24 bg-[#D6BFA7]" />
 
         <p
-          className="font-display max-w-2xl text-lg font-light italic leading-relaxed text-[#F8F3ED] sm:text-xl md:text-2xl"
+          className="font-display max-w-2xl text-lg font-light italic leading-relaxed  text-[#E8D8C8] sm:text-xl md:text-2xl"
           style={{ animationDelay: "0.5s" }}
         >
           {t(
@@ -51,7 +51,7 @@ const HeroSection = () => {
         >
           <a
             href="#booking"
-            className="rose-gold-glow rounded-full bg-[#B8956A] px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all duration-300 hover:bg-[#D6BFA7] hover:scale-[1.03] active:scale-[0.97]"
+            className="rose-gold-glow rounded-full bg-[#B8956A] px-8 py-3.5 font-body text-sm font-medium tracking-widest uppercase text-[#E8D8C8] transition-all duration-300 hover:bg-[#D6BFA7] hover:scale-[1.03] active:scale-[0.97]"
           >
             {t("Rezervoni Tani", "Book Now")}
           </a>

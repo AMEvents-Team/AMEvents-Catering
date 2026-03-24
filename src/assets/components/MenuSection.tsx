@@ -46,7 +46,7 @@ const MenuSection = () => {
     >
       <div ref={ref} className="section-reveal mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
-          <h2 className="font-display text-3xl font-light tracking-wide text-[#b76e79] sm:text-4xl md:text-5xl text-balance">
+          <h2 className="font-display text-3xl font-light tracking-wide text-[#B8956A] sm:text-4xl md:text-5xl text-balance">
             {t("Menu", "Menu")}
           </h2>
           <div className="mx-auto mt-4 h-px w-16 bg-[#d4af9a]/60" />
@@ -79,7 +79,7 @@ const MenuSection = () => {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="font-display text-xl font-medium text-[#b76e79]">
+                <h3 className="font-display text-xl font-medium text-[#B8956A]">
                   {item.title}
                 </h3>
               </div>
