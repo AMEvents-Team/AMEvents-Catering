@@ -18,9 +18,9 @@ const BookingSection = () => {
     e.preventDefault();
     const msg =
       lang === "al"
-        ? `Përshëndetje AM Event & Catering! Jam i/e interesuar për një ofertë për eventin tim. Detajet: ${form.name}, ${form.date}, ${form.guests}, ${form.type}, ${form.message}.`
-        : `Hello AM Event & Catering! I am interested in receiving an offer for my event. Details: ${form.name}, ${form.date}, ${form.guests}, ${form.type}, ${form.message}.`;
-    const url = `https://wa.me/38348801120?text=${encodeURIComponent(msg)}`;
+        ? `Përshëndetje AM Event & Catering! Jam i/e interesuar për një ofertë për eventin tim. Detajet: ${form.name},më datë ${form.date}, ${form.guests} të ftuar, ${form.type}, ${form.message}.`
+        : `Hello AM Event & Catering! I am interested in receiving an offer for my event. Details: ${form.name}, date:${form.date}, ${form.guests}guests, ${form.type}, ${form.message}.`;
+    const url = `https://wa.me/38348679674?text=${encodeURIComponent(msg)}`;
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) {
       setShowSuccess(true);
@@ -42,70 +42,109 @@ const BookingSection = () => {
       </h2>
       <div className="mx-auto mt-4 h-px w-16 bg-gradient-to-r from-transparent via-[#D6BFA7] to-transparent" />
     </div>
+<form onSubmit={handleSubmit} className="glass-card space-y-5 p-8 sm:p-10">
 
-    {/* FORM CARD */}
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-5 p-8 sm:p-10 rounded-3xl border border-[#E8D8C3] bg-[#E8D8C3]/20 backdrop-blur-xl shadow-lg"
+  {/* NAME */}
+  <div className="relative">
+    <input
+      type="text"
+      required
+      value={form.name}
+      onChange={(e) => setForm({ ...form, name: e.target.value })}
+      className="peer w-full rounded-xl border border-[#E8D8C3]/60 bg-[#E8D8C3]/30 px-4 pt-6 pb-2 font-body text-sm text-[#6F5B4B] placeholder-transparent backdrop-blur-md transition-all focus:border-[#C6A77D] focus:outline-none focus:ring-1 focus:ring-[#C6A77D]/30"
+      placeholder=" "
+    />
+    <label className="absolute left-4 top-2 text-xs text-[#C6A77D] transition-all 
+      peer-placeholder-shown:top-4 
+      peer-placeholder-shown:text-sm 
+      peer-placeholder-shown:text-[#A8907A] 
+      peer-focus:top-2 
+      peer-focus:text-xs 
+      peer-focus:text-[#C6A77D]">
+      {t("Emri", "Name")}
+    </label>
+  </div>
+
+  {/* DATE */}
+  <div className="relative">
+    <input
+      type="date"
+      required
+      value={form.date}
+      onChange={(e) => setForm({ ...form, date: e.target.value })}
+      className="w-full rounded-xl border border-[#E8D8C3]/60 bg-[#E8D8C3]/30 px-4 pt-6 pb-2 font-body text-sm text-[#6F5B4B] backdrop-blur-md transition-all focus:border-[#C6A77D] focus:outline-none focus:ring-1 focus:ring-[#C6A77D]/30"
+    />
+    <label className="absolute left-4 top-2 text-xs text-[#C6A77D]">
+      {t("Data e Eventit", "Event Date")}
+    </label>
+  </div>
+
+  {/* GUESTS */}
+  <div className="relative">
+    <input
+      type="number"
+      required
+      value={form.guests}
+      onChange={(e) => setForm({ ...form, guests: e.target.value })}
+      className="peer w-full rounded-xl border border-[#E8D8C3]/60 bg-[#E8D8C3]/30 px-4 pt-6 pb-2 font-body text-sm text-[#6F5B4B] placeholder-transparent backdrop-blur-md transition-all focus:border-[#C6A77D] focus:outline-none focus:ring-1 focus:ring-[#C6A77D]/30"
+      placeholder=" "
+    />
+    <label className="absolute left-4 top-2 text-xs text-[#C6A77D] transition-all 
+      peer-placeholder-shown:top-4 
+      peer-placeholder-shown:text-sm 
+      peer-placeholder-shown:text-[#A8907A] 
+      peer-focus:top-2 
+      peer-focus:text-xs">
+      {t("Numri i të Ftuarve", "Number of Guests")}
+    </label>
+  </div>
+
+  {/* TYPE */}
+  <div className="relative">
+    <select
+      required
+      value={form.type}
+      onChange={(e) => setForm({ ...form, type: e.target.value })}
+      className="w-full rounded-xl border border-[#E8D8C3]/60 bg-[#E8D8C3]/30 px-4 pt-6 pb-2 font-body text-sm text-[#6F5B4B] backdrop-blur-md transition-all focus:border-[#C6A77D] focus:outline-none focus:ring-1 focus:ring-[#C6A77D]/30"
     >
-      <input
-        type="text"
-        placeholder={t("Emri", "Name")}
-        required
-        value={form.name}
-        onChange={(e) => setForm({ ...form, name: e.target.value })}
-        className={inputClass}
-      />
+      <option value="">{t("Lloji i Eventit", "Event Type")}</option>
+      <option>{t("Dasmë", "Wedding")}</option>
+      <option>{t("Fejesa", "Engagement")}</option>
+      <option>{t("Event Korporativ", "Corporate Event")}</option>
+      <option>{t("Festë Private", "Private Party")}</option>
+    </select>
+    <label className="absolute left-4 top-2 text-xs text-[#C6A77D]">
+      {t("Lloji i Eventit", "Event Type")}
+    </label>
+  </div>
 
-      <input
-        type="date"
-        required
-        value={form.date}
-        onChange={(e) => setForm({ ...form, date: e.target.value })}
-        className={inputClass}
-      />
+  {/* MESSAGE */}
+  <div className="relative">
+    <textarea
+      rows={4}
+      value={form.message}
+      onChange={(e) => setForm({ ...form, message: e.target.value })}
+      className="peer w-full rounded-xl border border-[#E8D8C3]/60 bg-[#E8D8C3]/30 px-4 pt-6 pb-2 font-body text-sm text-[#6F5B4B] placeholder-transparent backdrop-blur-md transition-all focus:border-[#C6A77D] focus:outline-none focus:ring-1 focus:ring-[#C6A77D]/30 resize-none"
+      placeholder=" "
+    />
+    <label className="absolute left-4 top-2 text-xs text-[#C6A77D] transition-all 
+      peer-placeholder-shown:top-4 
+      peer-placeholder-shown:text-sm 
+      peer-placeholder-shown:text-[#A8907A] 
+      peer-focus:top-2 
+      peer-focus:text-xs">
+      {t("Mesazh", "Message")}
+    </label>
+  </div>
 
-      <input
-        type="number"
-        placeholder={t("Numri i të Ftuarve", "Number of Guests")}
-        required
-        value={form.guests}
-        onChange={(e) => setForm({ ...form, guests: e.target.value })}
-        className={inputClass}
-      />
-
-      <select
-        required
-        value={form.type}
-        onChange={(e) => setForm({ ...form, type: e.target.value })}
-        className={inputClass}
-      >
-        <option value="">
-          {t("Lloji i Eventit", "Event Type")}
-        </option>
-        <option>{t("Dasmë", "Wedding")}</option>
-        <option>{t("Fejesa", "Engagement")}</option>
-        <option>{t("Event Korporativ", "Corporate Event")}</option>
-        <option>{t("Festë Private", "Private Party")}</option>
-        <option>{t("Dekore-Dhurata", "Decor-Gifts")}</option>
-
-      </select>
-
-      <textarea
-        placeholder={t("Mesazh", "Message")}
-        rows={4}
-        value={form.message}
-        onChange={(e) => setForm({ ...form, message: e.target.value })}
-        className={inputClass + " resize-none"}
-      />
-
-      <button
-        type="submit"
-        className="w-full rounded-full bg-gradient-to-r from-[#B8956A] to-[#b76e79] py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all hover:scale-[1.02] active:scale-[0.97] shadow-md hover:shadow-lg"
-      >
-        {t("Dërgo Kërkesën", "Send Request")}
-      </button>
-    </form>
+  {/* BUTTON */}
+  <button
+    type="submit"
+    className="w-full rounded-full bg-[#C6A77D] py-3.5 font-body text-sm font-medium tracking-widest uppercase text-white transition-all hover:scale-[1.02] hover:bg-[#B8966F] active:scale-[0.97]"
+  >
+    {t("Dërgo Kërkesën", "Send Request")}
+  </button>
+</form>
 
     {/* SUCCESS MODAL */}
     {showSuccess && (
