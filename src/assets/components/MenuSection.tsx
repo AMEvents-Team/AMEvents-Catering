@@ -23,7 +23,7 @@ const MenuSection = () => {
     },
     {
       image: churros,
-      title: t("Ëmbëlsina", "Sweets"),
+      title: t("Ëmbëlsira", "Sweets"),
     },
     {
       image: miniPancakes,
@@ -102,7 +102,7 @@ const MenuSection = () => {
             "
           >
             {t(
-              "Për të personalizu menu-të e juaja na kontaktoni",
+              "Për të personalizuar menu-të e juaja na kontaktoni",
               "To customize your menus, contact us"
             )}
           </a>

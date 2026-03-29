@@ -11,7 +11,7 @@ const Footer = () => {
   alt="AM Event & Catering"
   className="h-28 sm:h-32 w-auto rounded-sm mb-4"
 />        <p className="font-body mt-3 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AM Event & Catering. {t("T'gjitha të drejtat e rezervueme.", "All rights reserved.")}
+          © {new Date().getFullYear()} AM Event & Catering. {t("Të gjitha të drejtat e rezervuara.", "All rights reserved.")}
         </p>
       </div>
     </footer>

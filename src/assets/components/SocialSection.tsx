@@ -39,7 +39,7 @@ const SocialSection = () => {
         {/* DESCRIPTION */}
         <p className="font-body mt-6 text-sm text-[#7D6A58]">
           {t(
-            "Na ndiqni për inspirim dhe projektet ma të fundit.",
+            "Na ndiqni për inspirim dhe projektet më të fundit.",
             "Follow us for inspiration and latest projects."
           )}
         </p>

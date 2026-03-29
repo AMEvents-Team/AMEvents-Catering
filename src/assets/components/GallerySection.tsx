@@ -73,7 +73,7 @@ const GallerySection = () => {
         <div className="mb-16 text-center">
           <h2 className="font-display text-3xl font-light tracking-wide  text-[#B8956A] sm:text-4xl md:text-5xl text-balance">
             {t(
-              "Dekorime të personalizueme për çdo event",
+              "Dekorime të personalizuara për çdo event",
               "Personalized styling for every event"
             )}
           </h2>

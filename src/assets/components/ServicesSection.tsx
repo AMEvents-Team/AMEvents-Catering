@@ -18,7 +18,7 @@ const ServicesSection = () => {
     {
       title: t("Catering për Dasma & Fejesa", "Wedding & Engagement Catering"),
       desc: t(
-        "Menu të kurueme me elegancë për ditën ma të veçantë.",
+        "Menu të kuruara me elegancë për ditën tuaj më të veçantë.",
         "Curated luxury menus for unforgettable celebrations."
       ),
       image: macaroonsTable,
@@ -99,7 +99,7 @@ const ServicesSection = () => {
 
             <p className="text-[#7D6A58] leading-relaxed mb-10 relative z-10">
               {t(
-                "Së shpejti sjellim nji eksperiencë krejtësisht të re për eventet tuaja: ftesa digjitale elegante dhe nji sistem unik ku mysafirët munden me skanu QR code gjatë eventit për të ba foto. Të gjitha fotot mbledhen automatikisht dhe krijojnë nji album digjital të përbashkët për kujtime t'paharrueme.",
+                "Së shpejti sjellim një eksperiencë krejtësisht të re për eventet tuaja: ftesa digjitale elegante dhe një sistem unik ku mysafirët munden të skanojnë QR code gjatë eventit për të bërë foto. Të gjitha fotot mblidhen automatikisht dhe krijojnë një album digjital të përbashkët për kujtime të paharruara.",
                 "Coming soon: a completely new event experience – elegant digital invitations and a unique system where guests can scan a QR code during the event to capture photos. All photos are automatically collected into a shared digital album of unforgettable memories."
               )}
             </p>
